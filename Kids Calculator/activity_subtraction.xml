@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/background_light"
+            android:fillViewport="false">
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:paddingBottom="@dimen/activity_vertical_margin">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Subtraction Learn Mode"
+                android:id="@+id/subtractionSignTextView"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:textColor="#1300ff"/>
+
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems = "10"
+                android:id="@+id/subtraction1EditText"
+                android:layout_below="@+id/subtractionSignTextView"
+                android:layout_alignParentLeft="true"
+                android:textColor="#1300ff"
+                android:layout_alignRight="@+id/subtractionSignTextView"
+                android:numeric="integer"/>
+
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:id="@+id/subtraction2EditText"
+                android:layout_below="@+id/subtraction1EditText"
+                android:layout_alignParentLeft="true"
+                android:textColor="#1300ff"
+                android:layout_alignRight="@+id/subtraction1EditText"
+                android:numeric="integer"/>
+
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Subtract!"
+                android:id="@+id/subtractionButton"
+                android:layout_below="@+id/subtraction2EditText"
+                android:layout_alignParentLeft="true"
+                android:background="#0300ff"
+                android:textColor="#ffffff"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/carryForwardTextView"
+                android:text="Borrow"
+                android:layout_below="@+id/subtractionButton"
+                android:layout_alignLeft="@+id/subtractionButton"
+                android:textColor="#1300ff"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="FirstNumber"
+                android:id="@+id/num1TextView"
+                android:layout_below="@+id/carryForwardTextView"
+                android:layout_alignLeft="@+id/carryForwardTextView"
+                android:textColor="#1300ff"/>
+
+
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="SecondNumber"
+                android:id="@+id/num2TextView"
+                android:layout_below="@+id/num1TextView"
+                android:layout_alignLeft="@+id/num1TextView"
+                android:textColor="#1300ff"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Explanation"
+                android:id="@+id/explanationTextView"
+                android:layout_marginTop="11dp"
+                android:layout_below="@+id/answerTextView"
+                android:layout_alignLeft="@+id/answerTextView"
+                android:textColor="#1300ff"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Answer"
+                android:id="@+id/answerTextView"
+                android:textColor="#1300ff"
+                android:layout_below="@+id/subtractionLineTextView"
+                android:layout_alignLeft="@+id/subtractionLineTextView"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="-"
+                android:id="@+id/subtractionSignOperatorTextView"
+                android:layout_alignTop="@+id/num2TextView"
+                android:layout_toRightOf="@+id/num2TextView"
+                android:textColor="#1300ff"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="_____________"
+                android:id="@+id/subtractionLineTextView"
+                android:textColor="#1300ff"
+                android:layout_below="@+id/num2TextView"
+                android:layout_alignLeft="@+id/num2TextView"/>
+
+    </RelativeLayout>
+</ScrollView>

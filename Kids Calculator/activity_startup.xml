@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Welcome to Kids Calculator!! "
+            android:id="@+id/textView"
+            android:layout_gravity="center"
+            android:textAlignment="textStart"
+            android:textColor="#1300ff"
+            android:textStyle="italic"
+            android:textIsSelectable="true"
+            android:padding="@dimen/activity_horizontal_margin"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Learn Modes"
+            android:id="@+id/learnModeSign"
+            android:layout_gravity="center"
+            android:textColor="#001eff"
+            android:textStyle="italic"/>
+
+    <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Addition"
+            android:id="@+id/additionButton"
+            android:textColor="#ffffff"
+            android:background="#1300ff"
+            android:clickable="false"/>
+
+    <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Subtraction"
+            android:id="@+id/subtractionButton"
+            android:layout_gravity="center"
+            android:textColor="#ffffff"
+            android:background="#1300ff"
+            android:enabled="true"
+            android:padding="@dimen/activity_horizontal_margin"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Practice Modes"
+            android:id="@+id/practiceModesSign"
+            android:textColor="#001eff"
+            android:textStyle="italic"
+            android:layout_gravity="center"/>
+
+    <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Addition"
+            android:id="@+id/additionPracticeButton"
+            android:textColor="#ffffff"
+            android:background="#1300ff"
+            android:clickable="false"/>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Subtraction"
+        android:id="@+id/subtractionPractice"
+        android:textColor="#ffffff"
+        android:background="#1300ff"
+        android:clickable="false"
+          />
+
+</LinearLayout>

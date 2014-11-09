@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:fillViewport="true">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Subtraction Practice Mode"
+            android:id="@+id/subtractionSignTextView"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:textColor="#1300ff"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/answerEditText"
+            android:textColor="#1300ff"
+            android:layout_below="@+id/num2TextView"
+            android:layout_alignLeft="@+id/carryForwardTextView"
+            android:hint="Answer Here"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Subtract the 2 Numbers and then turn your device. Try to get 5 full rotations without a mistake!"
+            android:textColor="#1300ff"
+            android:id="@+id/textView"
+            android:layout_below="@+id/subtractionSignTextView"
+            android:layout_alignLeft="@+id/subtractionSignTextView"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Num 1"
+            android:textColor="#1300ff"
+            android:id="@+id/num1TextView"
+            android:layout_below="@+id/textView"
+            android:layout_alignLeft="@+id/answerEditText"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Num 2"
+            android:textColor="#1300ff"
+            android:id="@+id/num2TextView"
+            android:layout_below="@+id/num1TextView"
+            android:layout_alignLeft="@+id/answerEditText"/>
+
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thats My Answer!"
+            android:textColor="#ffffff"
+            android:id="@+id/thatsMyAnswerButton"
+            android:layout_alignTop="@+id/answerEditText"
+            android:layout_toRightOf="@+id/answerEditText"
+            android:background="#0015ff"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="I want to Learn More!"
+            android:id="@+id/helpButton"
+            android:textColor="#ffffff"
+            android:layout_below="@+id/answerEditText"
+            android:layout_alignLeft="@+id/answerEditText"
+            android:background="#0200ff"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Explanation"
+            android:id="@+id/Explain"
+            android:textColor="#1300ff"
+            android:layout_below="@+id/answerSign"
+            android:layout_alignParentLeft="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Borrow"
+            android:id="@+id/Borrow"
+            android:textColor="#1300ff"
+            android:layout_below="@+id/helpButton"
+            android:layout_alignParentLeft="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="SecondNumber"
+            android:id="@+id/Num2"
+            android:textColor="#1300ff"
+            android:layout_below="@+id/subtractionSign"
+            android:layout_alignParentLeft="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="-"
+            android:id="@+id/subtractionSign"
+            android:textColor="#1300ff"
+            android:layout_below="@+id/Borrow"
+            android:layout_toRightOf="@+id/helpButton" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="FirstNumber"
+            android:id="@+id/Num1"
+            android:textColor="#1300ff"
+            android:layout_above="@+id/Num2"
+            android:layout_alignParentLeft="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/answerSign"
+            android:text="Answer"
+            android:textColor="#1300ff"
+            android:layout_below="@+id/Num2"
+            android:layout_alignParentLeft="true" />
+
+
+    </RelativeLayout>
+</ScrollView>

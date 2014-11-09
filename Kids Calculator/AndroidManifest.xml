@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.aerovtp.vidur.learningcalculator"
+          android:versionCode="11"
+          android:versionName="1.4.2"  >
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <supports-screens
+            android:largeScreens="true"
+            android:normalScreens="true"
+            android:smallScreens="false"
+            android:xlargeScreens="true" />
+    <uses-sdk
+            android:minSdkVersion="8"
+            android:targetSdkVersion="17" />
+
+    <application
+            android:allowBackup="true"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme"
+            >
+        <activity
+                android:name="com.aerovtp.vidur.learningcalculator.MainActivity"
+                android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+                android:name="com.aerovtp.vidur.learningcalculator.AdditionActivity"
+                android:label="Addition" >
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+                android:name="com.aerovtp.vidur.learningcalculator.SubtractionActivity"
+                android:label="Subtraction" >
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+                android:name="com.aerovtp.vidur.learningcalculator.additionPractice"
+                android:label="AdditionPractice" >
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+                android:name="com.aerovtp.vidur.learningcalculator.VideoActivity"
+                android:label="VideoActivity" >
+            <intent-filter>?
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.aerovtp.vidur.learningcalculator.subtractionPractice"
+            android:label="SubtractinPractice" >
+            <intent-filter>?
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
+
