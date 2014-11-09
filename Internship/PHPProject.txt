@@ -1,0 +1,98 @@
+Code for initial upload interface :
+
+<form enctype="multipart/form-data" action="insertimagesql.php" method="post" name="changer">
+<input name="MAX_FILE_SIZE" value="1000000000000000" type="hidden">
+<input name="image" accept="image/png" type="file">
+<input value="Submit" type="submit">
+
+Code for PHP script getting uploaded files and saving them :
+
+
+<?php
+
+// Create MySQL login values and
+// set them to your login information.
+$username = "vidur";
+$password = "viduronharp12345";
+$host = "harp.cs.wright.edu";
+$database = "vidur";
+
+// Make the connect to MySQL or die
+// and display an error.
+$link = mysql_connect($host, $username, $password);
+if (!$link) {
+die('Could not connect: ' . mysql_error());
+}
+
+// Select your database
+mysql_select_db ($database);
+
+// Make sure the user actually
+// selected and uploaded a file
+//if (isset($_FILES['image']) && $_FILES['image']['size'] > 0) {
+
+// Temporary file name stored on the server
+// Make sure the user actually
+// selected and uploaded a file
+//if (isset($_FILES['image']) && $_FILES['image']['size'] > 0) {
+
+// Temporary file name stored on the server
+//$tmpName = $_FILES['image']['tmp_name'];
+
+// Make sure the user actually
+// selected and uploaded a file
+//if (isset($_FILES['image']) && $_FILES['image']['size'] > 0) {
+
+// Temporary file name stored on the server
+$tmpName = $_FILES['image']['tmp_name'];
+
+// Read the file
+$fp = fopen($tmpName, 'r');
+$data = fread($fp, filesize($tmpName));
+$data = addslashes($data);
+fclose($fp);
+
+
+// Create the query and insert
+// into our database.
+$query = "INSERT INTO tbl_images ";
+$query .= "(image) VALUES ('$data')";
+$results = mysql_query($query, $link);
+
+// Print results
+print "Your pictures is now viewable from the Virtual Discovery Outreach Center.";
+
+//}
+//else {
+//print "No image selected/uploaded";
+//}
+
+// Close our MySQL Link
+mysql_close($link);
+?>
+
+Code for processing request from open sim and displaying image:
+
+<?php
+$id = $_GET['id'];
+
+$username = "vidur";
+$password = "viduronharp12345";
+$host = "harp.cs.wright.edu";
+$database = "vidur";
+
+mysql_connect($host, $username, $password) or die("Can not connect to database: ".mysql_error());
+
+mysql_select_db($database) or die("Can not select the database: ".mysql_error());
+
+//$id = 8;
+//if(!isset($id) || empty($id) || !is_int($id)){
+  //   die("Please select your image!");
+//}
+//else {
+$query = mysql_query("SELECT * FROM tbl_images WHERE id='".$id."'");
+$row = mysql_fetch_array($query);
+$content = $row['image'];
+
+header('Content-type: image/png');
+     echo $content;
