@@ -84,28 +84,28 @@ task main()
 
 	go(27, 100);
 	motor[motorD]=-100;
-	  motor[motorE]=-100;
-	  wait1Msec(300);
+  motor[motorE]=-100;
+  wait1Msec(300);
 
-		int i=0;
+	int i=0;
 
-		while(i<=14) //while time hasn't expired
+	while(i<=14) //while time hasn't expired
+	{
+
+		i=i+1;
+
+		go(6,153);
+
+		if (BeaconCheck() == 1)
 		{
+		  go(9,75);
+		//go an adjustment dist
+			dropBlock();
 
-			i=i+1;
-
-			go(6,153);
-
-			if (BeaconCheck() == 1)
-			{
-			  go(9,75);
-			//go an adjustment dist
-				dropBlock();
-
-						return;
-			}
+					return;
 		}
-	 dropBlock();
+	}
+ dropBlock();
 
 
 }
