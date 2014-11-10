@@ -12,10 +12,10 @@ Code for PHP script getting uploaded files and saving them :
 
 // Create MySQL login values and
 // set them to your login information.
-$username = "vidur";
-$password = "viduronharp12345";
-$host = "harp.cs.wright.edu";
-$database = "vidur";
+$username = "xxx";
+$password = "xxx";
+$host = "xxx.cs.wright.edu";
+$database = "xxx";
 
 // Make the connect to MySQL or die
 // and display an error.
@@ -76,10 +76,10 @@ Code for processing request from open sim and displaying image:
 <?php
 $id = $_GET['id'];
 
-$username = "vidur";
-$password = "viduronharp12345";
-$host = "harp.cs.wright.edu";
-$database = "vidur";
+$username = "xxx";
+$password = "xxx";
+$host = "xxx.cs.wright.edu";
+$database = "xxx";
 
 mysql_connect($host, $username, $password) or die("Can not connect to database: ".mysql_error());
 
